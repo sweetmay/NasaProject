@@ -6,5 +6,13 @@
     <fragment
         android:id="@+id/APODFragment"
         android:name="com.sweetmay.nasa.view.ui.APODFragment"
-        android:label="APODFragment" />
+        android:label="APODFragment" >
+        <action
+            android:id="@+id/action_APODFragment_to_earthPicFragment"
+            app:destination="@id/earthPicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/earthPicFragment"
+        android:name="com.sweetmay.nasa.view.ui.EarthPicFragment"
+        android:label="EarthPicFragment" />
 </navigation>

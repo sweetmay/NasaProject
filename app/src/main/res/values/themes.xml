@@ -13,5 +13,14 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="APODFragmentElement">
+        <item name="android:paddingTop">4dp</item>
+    </style>
+
+    <style name="TitleStyle">
+        <item name="android:textSize">32sp</item>
     </style>
 </resources>

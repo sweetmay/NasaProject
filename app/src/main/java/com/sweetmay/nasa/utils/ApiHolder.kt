@@ -1,15 +1,14 @@
 package com.sweetmay.nasa.utils
 
-import com.sweetmay.nasa.model.repo.api.DataSource
+import com.sweetmay.nasa.model.repo.api.DataSourceCommon
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiHolder(baseUrl: String) {
-    val dataSource: DataSource
+    val dataSourceCommon: DataSourceCommon
 
     init {
         val retrofit = Retrofit.Builder()
@@ -18,7 +17,7 @@ class ApiHolder(baseUrl: String) {
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .build()
-        dataSource = retrofit.create(DataSource::class.java)
+        dataSourceCommon = retrofit.create(DataSourceCommon::class.java)
     }
 
     private fun createHttpClient(): OkHttpClient {
