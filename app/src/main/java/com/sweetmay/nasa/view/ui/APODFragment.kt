@@ -34,23 +34,33 @@ class APODFragment: BaseFragment<FragmentApodBinding>(), APODView {
         }
     }
 
-    @SuppressLint("SetJavaScriptEnabled")
-    override fun showApod(apod: APOD) {
+    override fun showApodImage(apod: APOD) {
         with(binding){
-            if(apod.media_type == "video"){
-                apodVideo.visibility = View.VISIBLE
-                apodVideo.settings.javaScriptEnabled = true
-                apodVideo.loadUrl(apod.url)
-            }else{
                 apodImage.visibility = View.VISIBLE
                 apodImage.load(apod.url)
+                explanationApod.text = apod.explanation
             }
-            explanationApod.text = apod.explanation
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    override fun showApodVideo(apod: APOD) {
+        with(binding){
+            apodVideo.visibility = View.VISIBLE
+            apodVideo.settings.javaScriptEnabled = true
+            apodVideo.loadUrl(apod.url)
         }
     }
 
     override fun setTitle() {
         binding.title.text = getString(R.string.picture_of_the_day_title)
+    }
+
+    override fun showLoading() {
+        binding.progressBar.show()
+    }
+
+    override fun hideLoading() {
+        binding.progressBar.hide()
     }
 
     override fun setBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentApodBinding {
