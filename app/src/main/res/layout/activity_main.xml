@@ -18,9 +18,9 @@
         android:id="@+id/bottom_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:backgroundTint="@color/design_default_color_primary"
         app:fabAlignmentMode="center"
         app:hideOnScroll="true"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
         app:navigationIcon="@drawable/ic_view_headline_24px"
         android:layout_gravity="bottom"/>
 

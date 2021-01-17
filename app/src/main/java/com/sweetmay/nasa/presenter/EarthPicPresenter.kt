@@ -17,7 +17,7 @@ class EarthPicPresenter(private val repo: INasaRepo,
         super.onFirstViewAttach()
         viewState.showLoading()
         viewState.setTitle()
-            val imageObservable = repo.getImageUrl(apiKey, App.base_url_epic)
+            val imageObservable = repo.getImageUrl(apiKey, App.BASE_URL_EPIC)
                     .observeOn(mainThreadScheduler)
                     .subscribe{url->
                         viewState.hideLoading()

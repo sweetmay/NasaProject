@@ -1,6 +1,8 @@
 package com.sweetmay.nasa.view.ui
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,13 +26,15 @@ class APODFragment: BaseFragment<FragmentApodBinding>(), APODView {
     lateinit var navController: NavController
 
     val presenter: APODPresenter by moxyPresenter {
-        APODPresenter(NasaRepo(ApiHolder(App.base_url)), App.api_key)
+        APODPresenter(NasaRepo(ApiHolder(App.BASE_URL)), App.API_KEY)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.inputLayout.setEndIconOnClickListener {
-            //TODO wikiseacrh
+            startActivity(Intent(Intent.ACTION_VIEW,
+                    Uri.parse(getString(R.string.wiki_base_url)
+                    .plus(binding.inputEditText.text.toString()))))
         }
     }
 

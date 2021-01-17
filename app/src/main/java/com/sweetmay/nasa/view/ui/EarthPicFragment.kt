@@ -17,8 +17,8 @@ import moxy.ktx.moxyPresenter
 class EarthPicFragment: BaseFragment<FragmentEarthPicBinding>(), EarthPicView {
 
     val presenter: EarthPicPresenter by moxyPresenter {
-        EarthPicPresenter(NasaRepo(ApiHolder(App.base_url)),
-                App.api_key,
+        EarthPicPresenter(NasaRepo(ApiHolder(App.BASE_URL)),
+                App.API_KEY,
                 AndroidSchedulers.mainThread())
     }
 
