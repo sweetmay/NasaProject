@@ -1,15 +1,16 @@
-package com.sweetmay.nasa.view.ui
+package com.sweetmay.nasa.view.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.navigation.NavigationView
 import com.sweetmay.nasa.R
 
-class BottomNavigationDrawerFragment(): BottomSheetDialogFragment() {
+class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
 
     lateinit var navigationView: NavigationView
     lateinit var navController: NavController
@@ -33,6 +34,10 @@ class BottomNavigationDrawerFragment(): BottomSheetDialogFragment() {
                 }
                 R.id.apod_menu->{
                     navController.navigate(R.id.APODFragment)
+                    dismiss()
+                }
+                R.id.rover_menu->{
+                    navController.navigate(R.id.roverFragmentParent)
                     dismiss()
                 }
             }

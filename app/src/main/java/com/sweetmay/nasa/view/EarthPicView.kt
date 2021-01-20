@@ -6,4 +6,5 @@ import moxy.viewstate.strategy.alias.AddToEndSingle
 interface EarthPicView: BaseView {
     fun setImage(url: String)
     fun setTitle()
+    fun setCaption(caption: String)
 }

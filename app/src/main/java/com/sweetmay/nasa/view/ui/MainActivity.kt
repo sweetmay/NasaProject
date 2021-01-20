@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import com.sweetmay.nasa.App
 import com.sweetmay.nasa.R
+import com.sweetmay.nasa.view.ui.fragment.BottomNavigationDrawerFragment
 
 class MainActivity : AppCompatActivity() {
 

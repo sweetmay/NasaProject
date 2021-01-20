@@ -5,14 +5,21 @@
 
     <fragment
         android:id="@+id/APODFragment"
-        android:name="com.sweetmay.nasa.view.ui.APODFragment"
+        android:name="com.sweetmay.nasa.view.ui.fragment.APODFragment"
         android:label="APODFragment" >
         <action
             android:id="@+id/action_APODFragment_to_earthPicFragment"
             app:destination="@id/earthPicFragment" />
+        <action
+            android:id="@+id/action_APODFragment_to_roverFragmentParent"
+            app:destination="@id/roverFragmentParent" />
     </fragment>
     <fragment
         android:id="@+id/earthPicFragment"
-        android:name="com.sweetmay.nasa.view.ui.EarthPicFragment"
+        android:name="com.sweetmay.nasa.view.ui.fragment.EarthPicFragment"
         android:label="EarthPicFragment" />
+    <fragment
+        android:id="@+id/roverFragmentParent"
+        android:name="com.sweetmay.nasa.view.ui.fragment.rover.RoverFragmentParent"
+        android:label="RoverFragmentParent" />
 </navigation>

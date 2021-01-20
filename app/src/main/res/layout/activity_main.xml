@@ -7,6 +7,7 @@
     tools:context=".view.ui.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
+        style="@style/FragmentPaddings"
         android:id="@+id/fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"

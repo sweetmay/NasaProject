@@ -21,7 +21,16 @@
         <item name="android:paddingTop">4dp</item>
     </style>
 
+    <style name="FragmentPaddings">
+        <item name="android:padding">10dp</item>
+    </style>
+
     <style name="TitleStyle">
         <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="CommonTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textIsSelectable">true</item>
     </style>
 </resources>

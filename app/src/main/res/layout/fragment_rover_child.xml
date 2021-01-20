@@ -12,25 +12,17 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/progress_bar"
-        android:textAlignment="center"
-        style="@style/TitleStyle"/>
-
     <com.github.chrisbanes.photoview.PhotoView
-        android:id="@+id/earth_pic"
+        android:id="@+id/rover_pic"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        app:layout_constraintTop_toBottomOf="@id/title"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/caption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/CommonTextStyle"
-        app:layout_constraintTop_toBottomOf="@id/earth_pic"/>
+        app:layout_constraintTop_toBottomOf="@id/rover_pic"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
