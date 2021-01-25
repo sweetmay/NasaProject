@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        android:id="@+id/wiki_input_transition"
+        app:constraintSetStart="@layout/fragment_apod_start"
+        app:constraintSetEnd="@layout/fragment_apod"
+        app:duration="10000">
+
+    </Transition>
+    </MotionScene>

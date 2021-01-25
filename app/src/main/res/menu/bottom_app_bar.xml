@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/theme_change_icon"
+        android:icon="@drawable/dark_mode_24px"
         android:title="@string/change_theme_icon"
         app:showAsAction="always"/>
 </menu>

@@ -9,7 +9,6 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.ContextCompat
 import com.sweetmay.nasa.App
 import com.sweetmay.nasa.R
 import com.sweetmay.nasa.view.ui.fragment.BottomNavigationDrawerFragment
@@ -38,16 +37,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.bottom_app_bar, menu)
-        val menuItem = menu?.findItem(R.id.theme_change_icon)
-
-        if (nightMode) {
-            menuItem?.icon = ContextCompat
-                    .getDrawable(this, R.drawable.dark_mode_24px)
-        } else {
-            menuItem?.icon = ContextCompat
-                    .getDrawable(this, R.drawable.dark_mode_filled_24px)
-
-    }
         return true
     }
 

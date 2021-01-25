@@ -33,6 +33,7 @@ class APODFragment: BaseFragment<FragmentApodBinding>(), APODView {
         APODPresenter(NasaRepo(ApiHolder(App.BASE_URL), DateUtil()), App.API_KEY)
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.inputLayout.setEndIconOnClickListener {
@@ -50,9 +51,11 @@ class APODFragment: BaseFragment<FragmentApodBinding>(), APODView {
                         apodImage, object : OnImageSuccessListener {
                     override fun onSuccess() {
                         hideLoading()
+                        binding.apodFragmentMotion.transitionToEnd()
                     }
                 })
                 explanationApod.text = apod.explanation
+
             }
     }
 

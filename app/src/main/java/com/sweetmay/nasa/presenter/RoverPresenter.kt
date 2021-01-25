@@ -1,4 +1,4 @@
-package com.sweetmay.nasa.presenter
+ package com.sweetmay.nasa.presenter
 
 import com.sweetmay.nasa.model.repo.INasaRepo
 import com.sweetmay.nasa.view.RoverView
@@ -19,13 +19,14 @@ class RoverPresenter(private val repo: INasaRepo,
     private fun roverImages(camera: String){
         val obs = repo.getRoverImage(apiKey, camera)
             .observeOn(mainThreadScheduler)
-            .subscribe{data->
+            .subscribe({data->
             if(data.photos.isNotEmpty()){
                 viewState.renderData(data.photos.first())
             }else {
                 roverImages(camera)
-            }
-        }
+            }}, {
+                //render error
+            })
         compositeDisposable.add(obs)
     }
 
