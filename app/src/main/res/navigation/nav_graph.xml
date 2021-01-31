@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/APODFragment">
 
     <fragment
         android:id="@+id/APODFragment"
         android:name="com.sweetmay.nasa.view.ui.fragment.APODFragment"
-        android:label="APODFragment" >
-        <action
-            android:id="@+id/action_APODFragment_to_earthPicFragment"
-            app:destination="@id/earthPicFragment" />
-        <action
-            android:id="@+id/action_APODFragment_to_roverFragmentParent"
-            app:destination="@id/roverFragmentParent" />
+        android:label="APODFragment"
+        tools:layout="@layout/fragment_apod">
     </fragment>
     <fragment
         android:id="@+id/earthPicFragment"
         android:name="com.sweetmay.nasa.view.ui.fragment.EarthPicFragment"
-        android:label="EarthPicFragment" />
+        android:label="EarthPicFragment"
+        tools:layout="@layout/fragment_earth_pic"/>
     <fragment
         android:id="@+id/roverFragmentParent"
+        tools:layout="@layout/fragment_rover"
         android:name="com.sweetmay.nasa.view.ui.fragment.rover.RoverFragmentParent"
         android:label="RoverFragmentParent" />
+
+    <action
+        android:id="@+id/action_to_earth"
+        app:destination="@id/earthPicFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+
+    <action
+        android:id="@+id/action_to_apod"
+        app:destination="@id/APODFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+
+    <action
+        android:id="@+id/action_to_rover"
+        app:destination="@id/roverFragmentParent"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+
 </navigation>

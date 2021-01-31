@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.motion.widget.MotionLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/apod_fragment_motion"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutDescription="@xml/fragment_apod_motion_scene">
+        android:layout_height="match_parent">
 
         <androidx.core.widget.ContentLoadingProgressBar
             android:id="@+id/progress_bar"
@@ -72,6 +71,6 @@
             app:layout_constraintTop_toBottomOf="@id/apod_image"
             android:layout_height="wrap_content"/>
 
-    </androidx.constraintlayout.motion.widget.MotionLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

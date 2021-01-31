@@ -51,7 +51,6 @@ class APODFragment: BaseFragment<FragmentApodBinding>(), APODView {
                         apodImage, object : OnImageSuccessListener {
                     override fun onSuccess() {
                         hideLoading()
-                        binding.apodFragmentMotion.transitionToEnd()
                     }
                 })
                 explanationApod.text = apod.explanation

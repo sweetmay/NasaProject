@@ -29,15 +29,15 @@ class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
         navigationView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.earth_pic_menu->{
-                    navController.navigate(R.id.earthPicFragment)
+                    navController.navigate(R.id.action_to_earth)
                     dismiss()
                 }
                 R.id.apod_menu->{
-                    navController.navigate(R.id.APODFragment)
+                    navController.navigate(R.id.action_to_apod)
                     dismiss()
                 }
                 R.id.rover_menu->{
-                    navController.navigate(R.id.roverFragmentParent)
+                    navController.navigate(R.id.action_to_rover)
                     dismiss()
                 }
             }

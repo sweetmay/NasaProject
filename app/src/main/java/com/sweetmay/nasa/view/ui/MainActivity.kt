@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setThemeAccordingToPrefs(checkDarkTheme())
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.bottom_app_bar))
-
 }
 
     private fun setThemeAccordingToPrefs(nightMode: Boolean) {
