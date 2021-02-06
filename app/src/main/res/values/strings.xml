@@ -4,4 +4,10 @@
     <string name="earth_imagery">Earth imagery</string>
     <string name="picture_of_the_day">Picture of the day</string>
     <string name="picture_of_the_day_title">Picture of the day</string>
+    <string name="wiki_base_url">https://en.wikipedia.org/wiki/</string>
+    <string name="change_theme_icon">Change theme icon</string>
+    <string name="rover_images">Rover images</string>
+    <string name="fhaz_tab">Front camera</string>
+    <string name="rhaz_tab">Rear camera</string>
+    <string name="nav_cam_tab">Nav camera</string>
 </resources>

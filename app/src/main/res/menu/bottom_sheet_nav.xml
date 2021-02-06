@@ -6,4 +6,7 @@
     <item
         android:id="@+id/earth_pic_menu"
         android:title="@string/earth_imagery" />
+    <item
+        android:id="@+id/rover_menu"
+        android:title="@string/rover_images"/>
 </menu>

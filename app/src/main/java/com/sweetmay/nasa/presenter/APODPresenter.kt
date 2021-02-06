@@ -18,7 +18,6 @@ class APODPresenter(private val nasaRepo: INasaRepo,
         val apodObserver = nasaRepo.getApod(api_key)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe{ apod->
-                viewState.hideLoading()
                 if(apod.media_type == "video"){
                     viewState.showApodVideo(apod)
                 }else {

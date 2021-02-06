@@ -12,17 +12,22 @@ class EarthPicPresenter(private val repo: INasaRepo,
                         private val mainThreadScheduler: Scheduler): MvpPresenter<EarthPicView>() {
 
     private val compositeDisposable = CompositeDisposable()
-
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
+
         viewState.showLoading()
         viewState.setTitle()
-            val imageObservable = repo.getImageUrl(apiKey, App.base_url_epic)
+            val imageObservable = repo.getImageUrl(apiKey, App.BASE_URL_EPIC)
                     .observeOn(mainThreadScheduler)
-                    .subscribe{url->
-                        viewState.hideLoading()
-                        viewState.setImage(url)
-            }
+                    .subscribe{imageData->
+                        viewState.setImage(imageData.url)
+                        viewState.setCaption(imageData.caption)
+                    }
         compositeDisposable.add(imageObservable)
-        }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        compositeDisposable.clear()
+    }
+}

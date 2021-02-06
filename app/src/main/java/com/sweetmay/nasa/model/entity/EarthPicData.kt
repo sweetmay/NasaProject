@@ -5,5 +5,6 @@ data class EarthPicData(
     val date: String,
     val identifier: String,
     val image: String,
-    val version: String
+    val version: String,
+    var url: String
 )
